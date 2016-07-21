@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block content %}
+{{ util.flashed_messages(dismissible=True) }}
+<div class="container" style="width: 50%; height: 50%;">
+    <div class="bs-callout bs-callout-primary" id="callout-focus-demo">
+        <h3>Please login to get started</h3>
+        <p><a class="btn btn-primary btn-md" href="/login" role="button">Login</a></p>
+        <div class="alert alert-danger">
+          <strong>WARNING:</strong>You will be temporarily redirected to Microsoft Azure for authentication
+        </div>
+    </div>
+</div>
+{%- endblock %}

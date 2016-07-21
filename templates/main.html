@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block content %}
+{{ util.flashed_messages(dismissible=True) }}
+
+<div class="container" style="width: 100%; height: 100%;">
+	<div class="panel panel-default">
+		<div class="panel-heading">OIDC (AAD) Authentication results</div>
+		{% if is_authenticated %}	
+            <div class="alert alert-success">
+                <strong>Authentication successful</strong>
+            </div>
+			<div class="panel-body">
+			{{ table }}
+			</div>
+		{% else %}
+			<div class="alert alert-danger">
+				<strong>Authentication failed</strong>
+			</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+	"tenant" : "domain.onmicrosoft.com",
+	"authorityHostUrl" : "https://login.microsoftonline.com",
+	"clientId" : "1-2-3-4",
+	"clientSecret" : "B7=",
+	"redirect_uri" : "http://104.197.236.230/login/callback",
+	"resource" : "00000002-0000-0000-c000-000000000000",
+	"issuer" : "https://sts.windows.net/tenant/",
+	"idp_cert": "ms_aad.pem"
+}
+
