@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, request, Response
 from flask_bootstrap import Bootstrap
-from flask_table import Table, Col
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
 import adal
@@ -11,7 +10,6 @@ import os
 import random
 import boto3
 import string
-import base64
 import jwt
 
 # https://login.microsoftonline.com/common/discovery/keys
@@ -120,6 +118,7 @@ def login_callback():
     roles = []
     for role in roles_list:
         roles.append(role['Arn'])
+
     # Get temporary AWS credentials using STS
     client = boto3.client('sts')
 
